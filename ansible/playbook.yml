@@ -1,0 +1,11 @@
+---
+- name: Atualizar webservers
+  hosts: all
+  remote_user: ubuntu
+  become: true
+
+  vars:
+    docker_install_compose: true
+
+  roles:
+    - gerrlingguy.docker
